@@ -17,7 +17,7 @@ python main.py
 
 The web service provides jokes via url 
 ```shell
-http://127.0.0.1:80/jokes_rp/get_jokes/<number_of_jokes>
+http://127.0.0.1/jokes_rp/get_jokes/<number_of_jokes>
 ```
 Calling the web service via this url, providing the <number_of_jokes> as parameter, 
 returns a list and displays these jokes in prompt.
@@ -27,6 +27,7 @@ returns a list and displays these jokes in prompt.
 
 ## ToDo
 - Tests
+- Persist requested jokes and make them callable via unique url-id
 
 ## Version
 0.1
