@@ -1,6 +1,6 @@
 # JokePy
 
-JokePy is a Python-Flask service that requests and shows random jokes. 
+JokePy is a (synchronous) Python-Flask service that requests and shows random jokes. 
 
 ## Installation
 
@@ -21,6 +21,13 @@ http://127.0.0.1/jokes_rp/get_jokes/<number_of_jokes>
 ```
 Calling the web service via this url, providing the <number_of_jokes> as parameter, 
 returns a list and displays these jokes in prompt.
+
+
+Find the web service documentation at  
+```shell
+http://127.0.0.1/doc
+```
+
 
 ## Licence
 [MIT](https://choosealicense.com/licenses/mit/)

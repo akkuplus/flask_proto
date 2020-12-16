@@ -1,5 +1,5 @@
 """
-Request
+Request some jokes.
 """
 
 import requests

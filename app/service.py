@@ -10,6 +10,14 @@ ld = Loader()
 # API
 api_namespace = Namespace('jokes_rp')
 
+
+@api_namespace.route('/get_jokes/')
+class Testing(Resource):
+    def get(self):
+        """Testing."""
+        return "OK Restplus", HTTPStatus.OK
+
+
 @api_namespace.route('/get_jokes/<int:number_of_jokes>')
 class Joke(Resource):
     """Model a collection of jokes"""
@@ -28,9 +36,3 @@ class Joke(Resource):
 
         else:
             abort(HTTPStatus.NOT_FOUND, "Jokes not found.")
-
-@api_namespace.route('/get_jokes/')
-class JokeWelcome(Resource):
-    def get(self):
-        """Testing."""
-        return "OK Restplus", HTTPStatus.OK
