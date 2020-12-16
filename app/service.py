@@ -3,7 +3,7 @@ from flask_restplus import Namespace, Resource
 from flask import abort
 from http import HTTPStatus
 
-from app.model import Loader
+from model import Loader
 
 ld = Loader()
 

@@ -1,8 +1,12 @@
 FROM tiangolo/uwsgi-nginx-flask:python3.8
 
 COPY ./app /app
+# COPY requirements.txt /app
 
-ENV FLASK_ENV=development
+ENV FLASK_ENV development
 
-#docker build -t myimage .
-#docker run -d --name mycontainer -p 80:80 myimage
+RUN pip install -r /app/requirements.txt
+
+WORKDIR /app
+
+CMD ["python","main.py"]
